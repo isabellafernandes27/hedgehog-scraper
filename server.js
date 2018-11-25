@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/hedgie/:keyword', (req, res) => {
-  var keyword = req.params.keyword
+  var keyword = req.params.keyword;
 
   function findHedgieImage(keyword) {
     var nightmare = Nightmare();
@@ -37,7 +37,7 @@ app.get('/hedgie/:keyword', (req, res) => {
         return result.slice(1, 5);
       })
       .then(function (images) {
-        res.json(images)
+        res.json(images);
       })
       .catch(function (error) {
         console.error('Search failed:', error);
