@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 // your endpoint
 app.get('/pets', (req, res) => {
-  res.send("I love puppies!!!")
+  res.send("I love puppies!!!");
 });
 
 app.get('/:name', (req, res) => {
