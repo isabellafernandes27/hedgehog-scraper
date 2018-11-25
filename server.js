@@ -19,7 +19,9 @@ app.get('/pets', (req, res) => {
 });
 
 app.get('/:name', (req, res) => {
-  res.send(`Hi, ${name}!`)
+  var name = req.params.name;
+
+  res.send(`Hi, ${name}!`);
 });
 
 // scraper endpoint
